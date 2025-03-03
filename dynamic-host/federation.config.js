@@ -4,6 +4,16 @@ module.exports = withNativeFederation({
 
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    // "script" is not a valid value for the "type" field [package.json]
+    // node_modules/systemjs/package.json:20:10:
+    // 20 │   "type": "script",
+
+    // 'systemjs/dist/system.min.js': {
+    //   packageInfo: {
+    //     entryPoint: 'systemjs/dist/system.min.js',
+    //     esm: false,
+    //   },
+    // },
   },
 
   skip: [
@@ -16,5 +26,5 @@ module.exports = withNativeFederation({
 
   // Please read our FAQ about sharing libs:
   // https://shorturl.at/jmzH0
-  
+
 });
