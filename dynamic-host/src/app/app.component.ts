@@ -12,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
   styles: [],
 })
 export class AppComponent {
-  title = 'dynamic-host';
+  title = 'dynamic-host [native-federation]';
   message = '';
 
   constructor () {
